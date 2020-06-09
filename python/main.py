@@ -1,4 +1,4 @@
-print("Welcome to Ilyas' programmed system")
+print("Welcome to SpellingBee278's programmed system")
 as_well = "Me too!"
 name = input("What is your name? ")
 age = input("What is your age? ")
@@ -43,8 +43,7 @@ else:
     print("Ok")
 
 if coding_question == "Yes":
-    yrs_of_code = input("How long have you been coding for?")
-
+   yrs_of_code = input("How long have you been coding for?")
 
 
 print()
