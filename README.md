@@ -10,5 +10,5 @@ cd python
 
 Finally do:
 
-python main.py
+python (python file-name)
 
