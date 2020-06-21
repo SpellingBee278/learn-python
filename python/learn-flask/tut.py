@@ -1,17 +1,54 @@
 
 # import flask framework, this tutorial series was by techwithtim
 
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request, session, flash
+from datetime import timedelta
 
 app = Flask(__name__)
-FLASK_DEBUG = 1
+app.secret_key = "sec_key"
+app.permanent_session_lifetime = timedelta(days=1)
 
 
-@app.route("/<name>")
-def home(name):
-    return render_template("index.html", content=["Stop", "joe", "Baquaaas"])
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        session.permanent = True
+        user = request.form["nm"]
+        session["user"] = user
+        return redirect(url_for("user", usr=user))
+
+    else:
+        if "user" in session:
+            return redirect(url_for("user"))
+
+        return render_template("login.html")
+
+
+@app.route("/user")
+def user():
+    if "user" in session:
+        user = session["user"]
+        return f"<h1>{user}</h1>"
+    else:
+        return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+      if "user" in session:
+        user = session["user"]
+        flash(f"You have been logged out!, {user}", "info")
+    session.pop("user", None)
+    return redirect(url_for("login"))
+
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
