@@ -1,8 +1,7 @@
-
 # import flask framework, this tutorial series was by techwithtim
-
 from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
+import sqlalchemy as sql
 
 app = Flask(__name__)
 app.secret_key = "sec_key"
@@ -20,33 +19,43 @@ def login():
         session.permanent = True
         user = request.form["nm"]
         session["user"] = user
-        return redirect(url_for("user", usr=user))
-
+        flash("Login Successful!")
+        return redirect(url_for("user"))
     else:
         if "user" in session:
+            flash("Already Logged In!")
             return redirect(url_for("user"))
-
         return render_template("login.html")
 
 
-@app.route("/user")
+@app.route("/user", methods=["POST", "GET"])
 def user():
+    email = None
     if "user" in session:
         user = session["user"]
-        return f"<h1>{user}</h1>"
+
+        if request.method == "POST":
+            email.request.form["email"]
+            session["email"] = email
+        else:
+            if email in session:
+                email = session["email"]
+
+        # return f"<h1>{user}</h1>"
+        return render_template("user.html", email=email)
+        # return render_template(url_for("user.html", user=user))
     else:
+        flash("You are not logged in!")
         return redirect(url_for("login"))
 
 
 @app.route("/logout")
 def logout():
-      if "user" in session:
+    if "user" in session:
         user = session["user"]
-        flash(f"You have been logged out!, {user}", "info")
-    session.pop("user", None)
-    return redirect(url_for("login"))
-
-    return redirect(url_for("login"))
+        flash(f"You have been logged out, {user}!", "info")
+        session.pop("user", None)
+        return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
