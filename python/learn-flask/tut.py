@@ -34,13 +34,6 @@ def user():
     if "user" in session:
         user = session["user"]
 
-        if request.method == "POST":
-            email.request.form["email"]
-            session["email"] = email
-        else:
-            if email in session:
-                email = session["email"]
-
         # return f"<h1>{user}</h1>"
         return render_template("user.html", email=email)
         # return render_template(url_for("user.html", user=user))
