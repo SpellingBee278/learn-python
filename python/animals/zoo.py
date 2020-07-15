@@ -2,6 +2,10 @@ from dog import Dog
 from cat import Cat
 from duck import Duck
 from bird import Bird
+from giraffe import Giraffe
+from hippo import Hippo
+from monkey import Monkey
+from bee import Bee
 
 What_animal = input("What animal do you want us to give information about? ")
 if What_animal == "Dog":
@@ -31,3 +35,31 @@ if What_animal == "Bird":
     b.get_number_of_legs()
     b.how_do_i_move()
     b.how_much_do_i_weigh()
+
+if What_animal == "Giraffe":
+    g = Giraffe(4)
+    g.say_hello()
+    g.get_number_of_legs()
+    g.how_do_i_move()
+    g.how_much_do_i_weigh()
+
+if What_animal == "Hippo":
+    h = Hippo(4)
+    h.say_hello()
+    h.get_number_of_legs()
+    h.how_do_i_move()
+    h.how_much_do_i_weigh()
+
+if What_animal == "Monkey":
+    m = Monkey(2)
+    m.say_hello()
+    m.get_number_of_legs()
+    m.how_do_i_move()
+    m.how_much_do_i_weigh()
+
+if What_animal == "Bee":
+    be = Bee(0)
+    be.say_hello()
+    be.get_number_of_legs()
+    be.how_do_i_move()
+    be.how_much_do_i_weigh()
