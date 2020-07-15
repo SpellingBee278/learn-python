@@ -3,6 +3,6 @@ class Animal:
     self.numberOfLegs = number_of_legs
 
   def get_number_of_legs(self):
-    print("This animal has ")
-    print(self.numberOfLegs)
+    print("This animal has 4 legs")
+
 
