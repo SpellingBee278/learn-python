@@ -14,3 +14,6 @@ class Bird(Animal):
 
   def how_much_do_i_weigh(self):
     print("I weigh 229-344 lbs")
+
+  def am_i_extinct(self):
+    print("I am not extinct")

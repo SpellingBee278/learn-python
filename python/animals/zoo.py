@@ -14,6 +14,7 @@ if What_animal == "Dog":
     d.get_number_of_legs()
     d.how_do_i_move()
     d.how_much_do_i_weigh()
+    d.am_i_extinct()
 
 if What_animal == "Cat":
     c = Cat(4)
@@ -21,6 +22,8 @@ if What_animal == "Cat":
     c.get_number_of_legs()
     c.how_do_i_move()
     c.how_much_do_i_weigh()
+    c.am_i_extinct()
+
 
 if What_animal == "Duck":
     d = Duck(2)
@@ -28,6 +31,7 @@ if What_animal == "Duck":
     d.get_number_of_legs()
     d.how_do_i_move()
     d.how_much_do_i_weigh()
+    d.am_i_extinct()
 
 if What_animal == "Bird":
     b = Bird(2)
@@ -35,6 +39,8 @@ if What_animal == "Bird":
     b.get_number_of_legs()
     b.how_do_i_move()
     b.how_much_do_i_weigh()
+    b.am_i_extinct()
+
 
 if What_animal == "Giraffe":
     g = Giraffe(4)
@@ -42,6 +48,8 @@ if What_animal == "Giraffe":
     g.get_number_of_legs()
     g.how_do_i_move()
     g.how_much_do_i_weigh()
+    g.am_i_extinct()
+
 
 if What_animal == "Hippo":
     h = Hippo(4)
@@ -49,6 +57,8 @@ if What_animal == "Hippo":
     h.get_number_of_legs()
     h.how_do_i_move()
     h.how_much_do_i_weigh()
+    h.am_i_extinct()
+
 
 if What_animal == "Monkey":
     m = Monkey(2)
@@ -56,6 +66,8 @@ if What_animal == "Monkey":
     m.get_number_of_legs()
     m.how_do_i_move()
     m.how_much_do_i_weigh()
+    m.am_i_extinct()
+
 
 if What_animal == "Bee":
     be = Bee(0)
@@ -63,3 +75,5 @@ if What_animal == "Bee":
     be.get_number_of_legs()
     be.how_do_i_move()
     be.how_much_do_i_weigh()
+    be.am_i_extinct()
+

@@ -1,5 +1,6 @@
 from animal import Animal
 
+
 class Dog(Animal):
 
   def say_hello(self):
@@ -11,3 +12,6 @@ class Dog(Animal):
 
   def how_much_do_i_weigh(self):
     print("I weigh approximately 40-55lbs")
+
+  def am_i_extinct(self):
+    print("I am not extinct")

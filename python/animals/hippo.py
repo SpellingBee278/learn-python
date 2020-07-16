@@ -13,3 +13,6 @@ class Hippo(Animal):
 
   def how_much_do_i_weigh(self):
     print("If I am male I weigh 5000-7000 lbs. If I am female I weigh 2866-3306 lbs.")
+
+  def am_i_extinct(self):
+    print("I am not extinct")

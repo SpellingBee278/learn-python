@@ -13,3 +13,6 @@ class Giraffe(Animal):
 
   def how_much_do_i_weigh(self):
     print("If I am a male giraffe I weigh 2,600-3000 lbs, and if I am a female giraffe I weigh 1,500-1,800 lbs")
+
+  def am_i_extinct(self):
+    print("I am not extinct")

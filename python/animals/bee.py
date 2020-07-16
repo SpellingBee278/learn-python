@@ -13,3 +13,6 @@ class Bee(Animal):
 
   def how_much_do_i_weigh(self):
     print("I weigh 1 tenth of a gram")
+
+  def am_i_extinct(self):
+    print("I am not extinct")
