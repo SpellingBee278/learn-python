@@ -10,8 +10,14 @@ class MathQuiz:
     ans = int(input(f"What is {num1} X {num2}? "))
     if ans == product:
         print("Well done! You have got the answer right!")
-        print("P.S You have to run the python file again to play..")
+        restart_question = input("Do you want to restart the math quiz? ")
+        if restart_question == 'Yes':
+            self.whole_math_quiz()
 
     else:
         print("You have got it wrong!")
-        print("P.S You have to run the python file again to play..")
+        restart_question = input("Do you want to restart the math quiz? ")
+        if restart_question == 'Yes':
+            self.whole_math_quiz()
+        else:
+            print("Math Quiz Ended")
